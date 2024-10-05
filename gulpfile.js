@@ -81,6 +81,7 @@ const javascripts = () => {
     paths.src + 'javascripts/main.js',
     paths.src + 'javascripts/totalMessagesChart.js',
     paths.src + 'javascripts/activityChart.js',
+    paths.src + 'javascripts/searchActivity.js',
   ])
     .pipe(plugins.prettyerror())
     .pipe(
@@ -105,7 +106,7 @@ const copySetTimezone = () => {
   return src(paths.src + 'js/setTimezone.js').pipe(dest(paths.dist + 'js/'));
 };
 
-// Task to copy images
+// Task to copy imag
 const copyImages = () => {
   return src(paths.src + 'images/**/*', { encoding: false }).pipe(
     dest(paths.dist + 'images/')
